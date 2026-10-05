@@ -1,0 +1,60 @@
+#ifndef MICROPASCAL_LEXER_TOKEN_H
+#define MICROPASCAL_LEXER_TOKEN_H
+
+#include <stddef.h>
+
+typedef enum TokenKind {
+    TOKEN_EOF,
+    TOKEN_IDENTIFICADOR,
+    TOKEN_INTEIRO_LITERAL,
+    TOKEN_REAL_LITERAL,
+    TOKEN_CHAR_LITERAL,
+    TOKEN_MENOR,
+    TOKEN_MAIOR,
+    TOKEN_MENOR_IGUAL,
+    TOKEN_MAIOR_IGUAL,
+    TOKEN_IGUAL,
+    TOKEN_DIFERENTE,
+    TOKEN_MAIS,
+    TOKEN_MENOS,
+    TOKEN_MULTIPLICACAO,
+    TOKEN_DIVISAO,
+    TOKEN_DIV,
+    TOKEN_AND,
+    TOKEN_OR,
+    TOKEN_NOT,
+    TOKEN_ATRIBUICAO,
+    TOKEN_ABRE_PARENTESES,
+    TOKEN_FECHA_PARENTESES,
+    TOKEN_VIRGULA,
+    TOKEN_PONTO_VIRGULA,
+    TOKEN_PONTO,
+    TOKEN_DOIS_PONTOS,
+    TOKEN_PROGRAM,
+    TOKEN_IF,
+    TOKEN_THEN,
+    TOKEN_ELSE,
+    TOKEN_WHILE,
+    TOKEN_DO,
+    TOKEN_REPEAT,
+    TOKEN_UNTIL,
+    TOKEN_INTEGER,
+    TOKEN_REAL,
+    TOKEN_CHAR,
+    TOKEN_BEGIN,
+    TOKEN_END,
+    TOKEN_WRITE,
+    TOKEN_VAR,
+    TOKEN_ERRO
+} TokenKind;
+
+typedef struct Token {
+    TokenKind kind;
+    char* lexema;
+    int linha;
+    int coluna;
+} Token;
+
+const char* tokenKindNome(TokenKind kind);
+
+#endif

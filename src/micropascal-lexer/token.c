@@ -1,0 +1,93 @@
+#include "micropascal-lexer/token.h"
+
+const char* tokenKindNome(TokenKind kind)
+{
+    switch (kind) {
+        case TOKEN_EOF:
+            return "EOF";
+        case TOKEN_IDENTIFICADOR:
+            return "IDENTIFICADOR";
+        case TOKEN_INTEIRO_LITERAL:
+            return "INTEIRO_LITERAL";
+        case TOKEN_REAL_LITERAL:
+            return "REAL_LITERAL";
+        case TOKEN_CHAR_LITERAL:
+            return "CHAR_LITERAL";
+        case TOKEN_MENOR:
+            return "MENOR";
+        case TOKEN_MAIOR:
+            return "MAIOR";
+        case TOKEN_MENOR_IGUAL:
+            return "MENOR_IGUAL";
+        case TOKEN_MAIOR_IGUAL:
+            return "MAIOR_IGUAL";
+        case TOKEN_IGUAL:
+            return "IGUAL";
+        case TOKEN_DIFERENTE:
+            return "DIFERENTE";
+        case TOKEN_MAIS:
+            return "MAIS";
+        case TOKEN_MENOS:
+            return "MENOS";
+        case TOKEN_MULTIPLICACAO:
+            return "MULTIPLICACAO";
+        case TOKEN_DIVISAO:
+            return "DIVISAO";
+        case TOKEN_DIV:
+            return "DIV";
+        case TOKEN_AND:
+            return "AND";
+        case TOKEN_OR:
+            return "OR";
+        case TOKEN_NOT:
+            return "NOT";
+        case TOKEN_ATRIBUICAO:
+            return "ATRIBUICAO";
+        case TOKEN_ABRE_PARENTESES:
+            return "ABRE_PARENTESES";
+        case TOKEN_FECHA_PARENTESES:
+            return "FECHA_PARENTESES";
+        case TOKEN_VIRGULA:
+            return "VIRGULA";
+        case TOKEN_PONTO_VIRGULA:
+            return "PONTO_VIRGULA";
+        case TOKEN_PONTO:
+            return "PONTO";
+        case TOKEN_DOIS_PONTOS:
+            return "DOIS_PONTOS";
+        case TOKEN_PROGRAM:
+            return "PROGRAM";
+        case TOKEN_IF:
+            return "IF";
+        case TOKEN_THEN:
+            return "THEN";
+        case TOKEN_ELSE:
+            return "ELSE";
+        case TOKEN_WHILE:
+            return "WHILE";
+        case TOKEN_DO:
+            return "DO";
+        case TOKEN_REPEAT:
+            return "REPEAT";
+        case TOKEN_UNTIL:
+            return "UNTIL";
+        case TOKEN_INTEGER:
+            return "INTEGER";
+        case TOKEN_REAL:
+            return "REAL";
+        case TOKEN_CHAR:
+            return "CHAR";
+        case TOKEN_BEGIN:
+            return "BEGIN";
+        case TOKEN_END:
+            return "END";
+        case TOKEN_WRITE:
+            return "WRITE";
+        case TOKEN_VAR:
+            return "VAR";
+        case TOKEN_ERRO:
+            return "ERRO";
+        default:
+            return "DESCONHECIDO";
+    }
+}
